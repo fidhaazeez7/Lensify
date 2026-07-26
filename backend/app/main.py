@@ -16,7 +16,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
-        "https://lensify-frontend-fc9o.onrender.com",
+        "https://lensify-ai.onrender.com",   
     ],
     allow_credentials=True,
     allow_methods=["*"],
