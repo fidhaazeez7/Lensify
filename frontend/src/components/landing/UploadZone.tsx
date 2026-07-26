@@ -108,7 +108,12 @@ export default function UploadZone({
 
       console.log("API Response:", response.data);
 
-onAnalysisComplete(response.data);
+try {
+  onAnalysisComplete(response.data);
+  console.log("Analysis page loaded successfully");
+} catch (err) {
+  console.error("React rendering error:", err);
+}
 
     } catch (error: any) {
       console.error("Upload Error:", error);
