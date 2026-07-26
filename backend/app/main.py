@@ -10,10 +10,13 @@ app = FastAPI(
     version="1.0.0",
 )
 
+from fastapi.middleware.cors import CORSMiddleware
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
+        "https://lensify-frontend-fc9o.onrender.com",
     ],
     allow_credentials=True,
     allow_methods=["*"],
